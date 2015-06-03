@@ -1,0 +1,16 @@
+# compile asm.S using GCC
+set_property(SOURCE ${CMAKE_CURRENT_LIST_DIR}/asm.S PROPERTY LANGUAGE C)
+
+# sources
+set(ARCH_SOURCES
+	${CMAKE_CURRENT_LIST_DIR}/arch.c
+	${CMAKE_CURRENT_LIST_DIR}/mmu.c
+	${CMAKE_CURRENT_LIST_DIR}/dl_helper.c
+	${CMAKE_CURRENT_LIST_DIR}/dl.c
+	${CMAKE_CURRENT_LIST_DIR}/asm.S
+)
+
+# sources
+set(ARCH_INCLUDES
+	${CMAKE_CURRENT_LIST_DIR}/include
+)
